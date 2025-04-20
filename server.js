@@ -12,6 +12,14 @@ app.use(express.json());
 const clienteRoutes = require('./routes/clienteRoutes');
 app.use('/api/clientes', clienteRoutes);
 
+const contadorRoutes = require('./routes/contadorRoutes');
+app.use('/api/contadores', contadorRoutes);
+
+const lecturaRoutes = require('./routes/lecturaRoutes');
+app.use('/api/lecturas', lecturaRoutes);
+
+
+
 app.listen(port, () => {
   console.log(`Servidor backend corriendo en puerto ${port}`);
 });
